@@ -1,5 +1,5 @@
 .{
-    .name = "SDL",
+    .name = "sdl",
     .version = "2.26.3-5",
     .dependencies = .{},
     .paths = .{

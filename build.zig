@@ -11,6 +11,12 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    _ = b.addModule("sdl", .{
+        .link_libc = true,
+        .target = target,
+        .optimize = optimize,
+    });
+
     lib.addIncludePath(.{ .path = "include" });
     lib.addCSourceFiles(.{ .files = &generic_src_files });
     lib.defineCMacro("SDL_USE_BUILTIN_OPENGL_DEFINITIONS", "1");
